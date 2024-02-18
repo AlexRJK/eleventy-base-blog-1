@@ -9,4 +9,4 @@ eleventyNavigation:
 
 {% image "./logo-color-resize.png", "A mug logo" %}
 {% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+

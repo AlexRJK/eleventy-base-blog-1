@@ -1,12 +1,20 @@
 
-<form netlify name="contact">
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" name="email"  class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea name="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-<button class="btn-primary" type="submit">Submit</button>
+<form netlify name="contact" onsubmit="return validateForm()">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name</label>
+    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Your first name" required>
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Your last name" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea name="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+  </div>
+  <button class="btn-primary" type="submit">Submit</button>
 </form>

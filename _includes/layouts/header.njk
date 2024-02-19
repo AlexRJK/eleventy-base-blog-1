@@ -1,14 +1,34 @@
-{#- importing the header using {% import 'header.njk %} doesnt work#}
-<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+  </li>
+  {# Understand this loop better! #}	
+  {% for post in collections.posts %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+  {# Include the "A Ode to a Mug" page in the navigation #}
+  <li class="nav-item">
+    <a class="nav-link" href="{{ '/about/page1/' | url }}">A Ode to a Mug</a>
+  </li>
+  {# static link TBD - maybe put about page here #}
+  <li class="nav-item">
+    <a class="nav-link" href="#">Static Link</a>
+  </li>
+</ul>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
-		</header>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

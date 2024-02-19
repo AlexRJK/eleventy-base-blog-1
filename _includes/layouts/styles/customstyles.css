@@ -1,0 +1,23 @@
+/* custom.css */
+
+/* Navbar background color */
+.navbar {
+    background-color: #336699; /* Change this to your desired background color */
+  }
+  
+  /* Navbar brand text color */
+  .navbar-brand {
+    color: #ffffff; /* Change this to your desired text color */
+    font-weight: bold; /* Example: Make the brand text bold */
+  }
+  
+  /* Navbar links color */
+  .nav-link {
+    color: #ffffff; /* Change this to your desired text color */
+  }
+  
+  /* Navbar links hover color */
+  .nav-link:hover {
+    color: #ffcc00; /* Change this to your desired hover color */
+  }
+  

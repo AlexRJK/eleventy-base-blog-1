@@ -1,0 +1,38 @@
+/* custom.scss */
+
+// Import Bootstrap Sass source
+@import 'path/to/bootstrap.scss';
+
+/* Custom styles for the navbar */
+.navbar {
+  background-color: #336699; // Change this to your desired background color
+
+  .navbar-brand {
+    color: #ffffff; // Change this to your desired text color
+    font-weight: bold; // Example: Make the brand text bold
+  }
+
+  .nav-link {
+    color: #ffffff; // Change this to your desired text color
+
+    &:hover {
+      color: #ffcc00; // Change this to your desired hover color
+    }
+
+    &.active {
+      color: #ffcc00; // Change this to your desired active link color
+      // Example: Make the active link bold
+      font-weight: bold;
+    }
+  }
+
+  .navbar-toggler-icon {
+    // Example: Customize the color of the toggle icon
+    background-color: #ffffff;
+  }
+
+  // Example: Add a box shadow to the navbar when scrolled
+  &.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
